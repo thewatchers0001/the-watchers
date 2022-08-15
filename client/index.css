@@ -1,0 +1,100 @@
+:root {
+    --text-light: #fff;
+}
+
+html {
+    background: #000;
+    color: var(--text-light);
+    font: 16px/125% 'source-sans-pro', arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    font-size: 1rem;
+    line-height: 1em;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+a {
+    color: var(--text-light);
+    font-size: 1em;
+}
+
+p {
+    line-height: 1.4em;
+    padding-bottom: 1.4em;
+    font-size: 1.2em;
+}
+
+@font-face {
+    font-family: 'Caveat';
+    src:
+        url('./media/font/Caveat-Bold.woff2') format('woff2');
+    src:
+        url('./media/font/Caveat-VariableFont_wght.woff2') format('woff2');
+}
+
+.handwriting {
+    font-family: 'Caveat', 'source-sans-pro', arial, sans-serif;
+    font-size: 1.8em;
+    font-variation-settings: 'wght' 600;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.col+.col {
+    margin-top: 2em;
+}
+
+@media screen and (min-width: 700px) {
+    .row {
+        flex-direction: row;
+    }
+
+    .col-50 {
+        width: 50%;
+    }
+
+    .col+.col {
+        margin-left: 2em;
+        margin-top: 0;
+    }
+}
+
+.highlight-background {
+    background-image: url(./media/gm-a1-frame-1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 250px;
+}
+
+.highlight-background:hover {
+    background-image: url(./media/gm-a1.gif);
+}

@@ -1,0 +1,25 @@
+{
+  "name": "the-watchers-website",
+  "version": "0.1.0",
+  "private": true,
+  "main": "server/app.js",
+  "engines": {
+    "node": "16.16.x",
+    "npm": "8.x"
+  },
+  "scripts": {
+    "start": "",
+    "dev": "NODE_ENV=development nodemon --delay 500ms server/app.js",
+    "build:libs:preact": "esbuild libs/preact.js --format=esm --minify --bundle --outfile=client/libs/preact.js",
+    "build:libs:htm": "esbuild libs/htm.js --format=esm --minify --bundle --outfile=client/libs/htm.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.51",
+    "eslint-config-react-app": "^7.0.1",
+    "express": "^4.18.1",
+    "htm": "^3.1.1",
+    "nodemon": "^2.0.19",
+    "preact": "^10.10.0",
+    "preact-router": "^4.1.0"
+  }
+}
