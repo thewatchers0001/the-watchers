@@ -38,7 +38,7 @@ jobs:
           # Upload entire repository
           # path: '.'
           # Upload only files in client/ directory
-          folder: client
+          path: './client'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@main
